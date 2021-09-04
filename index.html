@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
         <title>Document</title>
         <style>
             body{
-                background-image: url("img/bg.png");
+                background-image: url("img/bg.png"); 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.8em;
             }
             .headernav{
                 width: 1280px;
@@ -32,8 +34,6 @@
                 line-height: 12px;
                 padding: 19px;
                 color:#fff;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 0.8em;
                 text-decoration: none;
 
             }
@@ -46,19 +46,86 @@
                 background-size: 15px 15px;
                 background-position:0px 15px;
             }
+            .submenu{
+                position: absolute;
+                top:50px;
+                left: 0px;
+                list-style: none;
+                padding-left: 0px;
+                display: none;
+            }
+            .menu > li{
+                position: relative;
+            }
+            .submenu > li > a{
+                display: block;
+                width: 224px;
+                height: 60px;
+                padding-left: 26px;
+                line-height: 60px;
+                background:#fff;
+                color: #55555a;
+                text-decoration: none;
+            }
+            .submenu .fa-chevron-left{
+            }
+            .menu > li > .submenu > li > a:hover{
+                background:#ff6347;
+                color:#fff;
+            }
+            .submenu1{
+                width: 250px;
+                height: 300px;
+                background:#fff;
+                background:blue;
+                position: absolute;
+                top:0px;
+                left: 250px !important; 
+            }
+            .submenu > li{
+                position: relative;
+            }
+
+            .menu li:hover > .submenu{
+                display: block;
+            }
+            .menu li:hover > a{
+                background:#FF6347;
+                color:#fff;
+            }
         </style>
     </head>
     <body>
         <nav class="headernav">
-            <ul>
+            <ul class="menu">
                 <li>
                     <a href="#" class="ufoimg"> Company Logo</a>
                 </li>
-                <li>
+                <li> 
                     <a href="#" class="active" >Active</a>
                 </li>
                 <li>
                     <a href="#" >Drop Down <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Item one</a>
+                        </li>
+                        <li>
+                            <a href="#">Items Right Side <i class="fas fa-chevron-left"></i></a>
+                            <ul class="submenu submenu1">
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Item 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Item left side <i class="fas fa-chevron-left"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Item 4</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">Mega Menu <i class="fas fa-chevron-down"></i></a>
