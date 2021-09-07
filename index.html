@@ -104,13 +104,13 @@
         color: #fff;
       }
       .submenu_mega_menu{
-          display: block;
           width: 1280px;
           height: 374px;
-          border:1px dashed red;
+          background:#fff;
           position: absolute;
           top:50px;
           left:-353px;
+          color:#555;
       }
       .mega_menu_table{
         width: 100%;
@@ -122,13 +122,45 @@
       .pl0{
           padding-left: 0px !important;
       }
+      .mega_menu_table a:hover{
+        background: transparent !important;
+        color:#ff6347 !important;
+      }
       .mega_menu_table a{
           text-decoration: none;
           display: block;
           padding: 10px; /* TRBL */
+          color:#555;
+          padding-left: 0px;
       }
-      .mega_menu_table > tr:first-child > td:first-child{
-          width: 220px;
+      .mega_menu_table td{
+          width:16.66%;
+          padding-left: 26px;
+          vertical-align: top;
+      }
+      .image_submenu{
+        width: 678px;
+        height: 522px;
+        background: #fff;
+        position: absolute;
+        top:50px;
+        left:-183px;
+      }
+      .image_submenu > ul{
+          height: 230px;
+          border:1px dashed red;
+          list-style: none;
+          padding: 0px;
+      }
+
+      .image_submenu > ul > li{
+        float: left;
+        border:1px dashed green;
+        height: 100%;
+        width: 24.7%;
+      }
+      .image_submenu a{
+        background: transparent !important;
       }
     </style>
   </head>
@@ -198,10 +230,10 @@
         <li>
           <a href="#">Mega Menu <i class="fas fa-chevron-down"></i></a>
           <div class="submenu submenu_mega_menu">
-            <table border="1" class="mega_menu_table">
+            <table border="0" class="mega_menu_table">
                 <tr>
-                    <td>
-                        <h5>List Items</h5>
+                    <td class="td1">
+                        <h3>List Items</h3>
                         <ul class="pl0">
                             <li>
                                 <a href="#">NetTuts</a>
@@ -223,8 +255,49 @@
                             </li>
                         </ul>
                     </td>  
-                    <td>1</td>  
-                    <td>1</td>  
+                    <td>
+                      <h3>List Items</h3>
+                        <ul class="pl0">
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                        </ul>
+                    </td>  
+                    <td>
+                      <h3>Images + Description</h3>
+                        <ul class="pl0">
+                            <li>
+                                <a href="#">
+                                  <img width="40" style="float: left;margin-right: 10px;" src="img/1.png">
+                                  <div style="margin-top:6px;">
+                                     <div>Theme Forest</div>
+                                     <div>Description</div>
+                                  </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                            <li>
+                                <a href="#">NetTuts</a>
+                            </li>
+                        </ul>
+                    </td>  
                     <td>1</td>  
                     <td>1</td>  
                     <td>1</td>  
@@ -240,6 +313,25 @@
         </li>
         <li>
           <a href="#">Images <i class="fas fa-chevron-down"></i></a>
+          <div class="image_submenu">
+              <ul>
+                  <li>
+                      <h3>Product #1</h3>
+                      <a href="#">
+                        <img style="width: 100%;" src="img/3.jpg" >
+                      </a>
+                  </li>
+                  <li>
+                    B
+                  </li>
+                  <li>
+                    C
+                  </li>
+                  <li>
+                    D
+                  </li>
+              </ul>
+          </div>
         </li>
         <li>
           <a href="#">Contact <i class="fas fa-chevron-down"></i></a>
